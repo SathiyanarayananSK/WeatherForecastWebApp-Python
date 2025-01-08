@@ -1,7 +1,8 @@
 import requests
+import os
 
 # OpenWeatherMap API key
-API_KEY = "d0962101532aa3bb5c6150b61c0b7d45"
+API_KEY = os.getenv('WeatherAPIKey')
 
 def get_data(place, days):
     """Fetch weather forecast data for a given place and number of days."""
