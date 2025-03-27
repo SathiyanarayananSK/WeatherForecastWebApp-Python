@@ -1,8 +1,9 @@
 import requests
+import streamlit as st
 import os
 
 # OpenWeatherMap API key
-API_KEY = os.getenv('WeatherAPIKey')
+API_KEY = st.secrets["general"]["WeatherAPIKey"]
 
 def get_data(place, days):
     """Fetch weather forecast data for a given place and number of days."""
